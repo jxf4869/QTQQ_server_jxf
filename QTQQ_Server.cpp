@@ -13,9 +13,10 @@ const int gUdpPort = 6666;
 QTQQ_Server::QTQQ_Server(QWidget *parent)
     : QDialog(parent),
 	m_pixPath("")
-	
 {
     ui.setupUi(this);
+	//设置最小化及关闭按钮
+	setWindowFlags(Qt::WindowMinMaxButtonsHint| Qt::WindowCloseButtonHint);
 	//设置窗口标题
 	setWindowTitle(QString::fromLocal8Bit("QTQQjxf服务端"));
 	//连接数据库
